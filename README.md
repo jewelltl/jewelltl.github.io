@@ -1,63 +1,66 @@
-[hongxuke Blog](https://huangxuan.me)
-================================
+# Resume template
 
-> I never expected this to become popular.
+*A simple Jekyll + GitHub Pages powered resume template.*
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+![img](images/screenshot.png)
 
+## Docs
 
-[User Manual 👉](_doc/Manual.md)
---------------------------------------------------
+### Running locally
 
-### Getting Started
+To test locally, run the following in your terminal:
 
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+1. Clone repo locally
+1. `bundle install`
+2. `bundle exec jekyll serve`
+3. Open your browser to `localhost:4000`
 
-2. Installed dependencies in the `Gemfile`:
+### Running locally with Docker
 
-```sh
-$ bundle install 
-```
+To test locally with docker, run the following in your terminal after installing docker into your system:
 
-3. Serve the website (`localhost:4000` by default):
+1. `docker image build -t resume-template .`
+2. `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template`
 
-```sh
-$ bundle exec jekyll serve  # alternatively, npm start
-```
+### Customizing
 
-### Development (Build From Source)
+First you'll want to fork the repo to your own account. Then clone it locally and customize, or use the GitHub web editor to customize.
 
-To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
+#### Options/configuration
 
-Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
+Most of the basic customization will take place in the `/_config.yml` file. Here is a list of customizations available via `/_config.yml`:
 
-Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
+[...write these out...]
 
-This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
+#### Editing content
 
+Most of the content configuration will take place in the `/_layouts/resume.html` file. Simply edit the markup there accordingly
 
-### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+### Publishing to GitHub Pages for free
 
+[GitHub Pages](https://pages.github.com/) will host this for free with your GitHub account. Just make sure you're using a `gh-pages` branch, and the site will automatically be available at `yourusername.github.io/resume-template` (you can rename the repo to resume for your own use if you want it to be available at `yourusername.github.io/resume`). You can also add a CNAME if you want it to be available at a custom domain...
 
-Other Resources
----------------
+### Configuring with your own domain name
 
-Ports
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-hongxukeblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/hongxukepro.github.io/tree/ssr) by @LucasIcarus
+To setup your GH Pages site with a custom domain, [follow the instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) on the GitHub Help site for that topic.
 
-[Starter/Boilerplate](https://github.com/hongxukepro/hongxukeblog-boilerplate)
-- Out of date. Helps wanted for updating it on par with the main repo
+### Themes
 
-Translation
-- [🇨🇳  中文文档（有点过时）](https://github.com/hongxukepro/hongxukepro.github.io/blob/master/_doc/README.zh.md)
+Right now resume-template only has one theme. More are coming :soon: though. :heart:
 
+## Roadmap
 
-License
--------
+A feature roadmap is [available here](https://github.com/jglovier/resume-template/projects/1). If you features suggestions, please [open a new issue](https://github.com/jglovier/resume-template/issues/new).
 
-Apache License 2.0.
-Copyright (c) 2015-present hongxukepro
+## Contributing
 
-hongxuke Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
-Copyright (c) 2013-2016 Blackrock Digital LLC.
+If you spot a bug, or want to improve the code, or even make the dummy content better, you can do the following:
+
+1. [Open an issue](https://github.com/jglovier/resume-template/issues/new) describing the bug or feature idea
+2. Fork the project, make changes, and submit a pull request
+
+## License
+
+The code and styles are licensed under the MIT license. [See project license.](LICENSE) Obviously you should not use the content of this demo repo in your own resume. :wink:
+
+Disclaimer: Use of Lisa M. Simpson image and name used under [Fair Use](https://en.wikipedia.org/wiki/Fair_use) for educational purposes. Project license does not apply to use of this material.

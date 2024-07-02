@@ -1,7 +1,5 @@
-source 'https://rubygems.org'
-gem 'jekyll-paginate'
+source "https://rubygems.org"
 
-gem "jekyll", "~> 4.0"
-gem "rake"
-
-gem "webrick", "~> 1.7"
+gem 'github-pages'
+# this gem provides regeneration support improvements on Windows
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
